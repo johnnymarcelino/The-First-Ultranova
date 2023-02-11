@@ -1,1 +1,0 @@
-Iremos densenvolver uma aplicação utilizando linguagem C#.
