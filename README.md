@@ -1,2 +1,2 @@
-# The-First-Ultranova
-A primeira ultra-inovação
+# Learninig javascript language
+A repository to learn javascript language complete advanced
