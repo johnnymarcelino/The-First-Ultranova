@@ -60,3 +60,45 @@ objeto2.incrementa();
 console.log(objeto2.valor); // Imprime: 11
 
 
+
+
+
+
+// FUNÇÕES ANONIMAS
+
+/**
+ * Nome: somarNumeros
+ * @param {Array} numeros - Array contendo os números para realizar a operação.
+ * @param {Function} callback - Função callback para chamar após a operação ser concluída.
+ */
+
+function somarNumeros(numeros, callback) {
+  let resultado = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    resultado += numeros[i];
+  }
+  callback(resultado);
+}
+
+somarNumeros([1, 2, 3, 4, 5], function(resultado) {
+  console.log("O resultado da soma é:", resultado);
+});
+
+
+// PARTE 2
+
+
+/**
+ * 
+ * @param {Arr} numero - Array contendo os números para realizar a operação.
+ * @returns - Retorna o resultado esperado
+ */
+
+let dobrarNumero = function(numero) {
+  return numero * 2;
+}
+
+let numeros = [1, 2, 3, 4, 5];
+let numerosDobrados = numeros.map(dobrarNumero);
+
+console.log("Números dobrados:", numerosDobrados);
