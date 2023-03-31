@@ -59,3 +59,46 @@ numeros.sort(function (a, b) {
 });
 
 console.log("Números ordenados:", numeros);
+
+
+
+// -------------------------------------------------------- //
+
+// EXEMPLO DE CALLBACK NO BROSWER
+
+{/* <button onclick="mostrarMensagem()">Clique aqui</button> */}
+
+<script>
+function mostrarMensagem() {
+  alert("Olá, mundo!")
+}
+</script>
+
+
+/*
+Nesse exemplo, estamos utilizando a função callback mostrarMensagem para exibir uma mensagem de alerta quando o botão é clicado. Ao clicar no botão, o evento onclick é acionado, e a função mostrarMensagem é executada como callback. A mensagem de alerta é exibida no navegador.
+*/
+
+
+// Exemplo 2
+
+{/* <ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul> */}
+
+<script>
+let itens = document.getElementsByTagName("li");
+
+for (let i = 0; i < itens.length; i++) {
+  itens[i].onclick = function() {
+    alert("Você clicou no item " + (i+1));
+  }
+}
+</script>
+
+
+/*
+Nesse exemplo, estamos utilizando a função callback anônima function() {...} como callback para exibir uma mensagem de alerta quando um item da lista é clicado. Estamos utilizando a função getElementsByTagName para obter todos os elementos li na página, e em seguida, adicionando um evento onclick para cada um deles. Quando um item é clicado, a função callback anônima é executada, exibindo uma mensagem de alerta com o número do item clicado.
+*/
