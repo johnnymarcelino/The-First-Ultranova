@@ -55,4 +55,3 @@ console.log(addHello("world!")); // retorna "Hello, world!"
 const addGoodbye = createAdder("Goodbye, ");
 console.log(addGoodbye("John!")); // retorna "Goodbye, John!"
 
-
