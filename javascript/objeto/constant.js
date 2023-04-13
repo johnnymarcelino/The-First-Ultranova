@@ -20,6 +20,10 @@ pessoa2.apresentar(); // Olá, meu nome é João, tenho 25 anos e trabalho como 
 
 // objeto constante
 
+/*
+Nesse exemplo, pessoa é um objeto constante que possui duas propriedades, nome e idade. Ao tentar modificar a propriedade nome, o valor é alterado com sucesso. Porém, se tentarmos reatribuir o objeto constante, o código irá gerar um erro. Objetos constantes são úteis quando se deseja garantir que um objeto não será modificado acidentalmente em algum ponto do código.
+*/
+
 const pessoa = {
     nome: 'João',
     idade: 30
@@ -34,3 +38,4 @@ console.log(pessoa.nome) // Maria
 
 // Tentando reatribuir o objeto constante (gerará um erro)
 pessoa = {}
+
