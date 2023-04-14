@@ -1,3 +1,5 @@
+// inheritance - part 1
+
 const ferrari = {
     modelo: 'F40',
     velMax: 324
@@ -18,6 +20,7 @@ console.log(typeof Object, typeof MeuObjeto)
 console.log(Object.prototype, MeuObjeto.prototype)
 
 
+// inheritance - part 2
 
 // Cadeia de protótipos (Prototype chain)
 
@@ -54,3 +57,33 @@ console.log(volvo.status())
 
 ferrari.acelerarMais(300)
 console.log(ferrari.status())
+
+// inheritance - part 3
+
+const pai1 = { nome: 'Pedro', corCabelo: 'preto' }
+
+const filha1 = Object.create(pai1)
+filha1.nome = 'Ana'
+console.log(filha1.corCabelo)
+
+const filha2 = Object.create(pai1, {
+    nome: {
+        value: 'Maria',
+        writable: false,
+        enumerable: true,
+        configurable: false
+    }
+})
+
+console.log(filha2.nome)
+filha2.nome = "Carla"
+console.log(`${filha2.nome} tem cabelo ${filha2.corCabelo}`)
+
+console.log(Object.keys(filha1))
+console.log(Object.keys(filha2))
+
+for (let key in filha2) {
+    filha2.hasOwnPropety(key) ?
+    console.log(key) : console.log(`Por herança: ${key}`)
+}
+
