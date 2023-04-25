@@ -1,0 +1,14 @@
+<input id="target">
+<div>Adam</div>
+<div>Eve</div>
+
+<script>
+    const divs = document.querySelectorAll()
+
+    for (let div of divs)
+        div.onclick = changeTarget;
+    
+    function changeTarget() {
+        target.value = this.innerText;
+    }
+</script>

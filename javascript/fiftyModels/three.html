@@ -1,0 +1,20 @@
+<div style="text-align:center">
+    TAX <input type="number" id="TextTax">
+    <div id="divBalance"></div>
+</div>
+
+<script>
+    const EXPENSES = [13, 1071, 21];
+    const INCOME = 1453;
+
+texTax.oninput = showBalance;
+function showBalance() {
+    const BALANCE = EXPENSES.reduce(extaction, INCOME);
+    divBalance.innerText = `BALANCE: $(BALANCE)`;
+}
+
+function extaction(result, currentVal) {
+    const TAX = texTax.value;
+    return result - (currentVal + currentVal * TAX);
+}
+</script>

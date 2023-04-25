@@ -1,0 +1,14 @@
+<div class="cat">Leopard</div>
+<div class="cat">Tiger</div>
+<div class="cat">Lion</div>
+
+<script>
+    const cats = document.querySelectorAll(".cat")
+    for (let cat of cats) {
+        cat.onclick = changeText;
+    }
+
+    function changeText() {
+        this.innerHTML = "changed";
+    }
+</script>
